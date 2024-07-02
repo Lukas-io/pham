@@ -27,7 +27,7 @@ To set up and run the app locally, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/lukas-io/pham.git
-   cd furniture_ecommerce_app
+   cd pham
    ```
 
 2. **Install dependencies**:
