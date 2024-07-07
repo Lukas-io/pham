@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pham/home.dart';
+import 'package:pham/features/furniture/presentation/pages/home.dart';
 
 void main() {
   runApp(const MyApp());

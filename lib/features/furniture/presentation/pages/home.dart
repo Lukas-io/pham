@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pham/product_model.dart';
-import 'package:pham/tabs.dart';
+import 'package:pham/features/furniture/domain/entity/product_entity.dart';
+import 'package:pham/features/furniture/presentation/pages/tabs.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});

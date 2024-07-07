@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pham/furniture_details.dart';
-import 'package:pham/product_model.dart';
+import 'package:pham/features/furniture/presentation/pages/product_details.dart';
+import 'package:pham/features/furniture/domain/entity/product_entity.dart';
 
 class TabIcon extends StatelessWidget {
   final IconData iconData;
@@ -47,7 +47,7 @@ class TabIcon extends StatelessWidget {
 }
 
 class FurnitureProduct extends StatelessWidget {
-  final ProductModel productModel;
+  final ProductEntity productModel;
 
   // final Function<void> onClick;
 
@@ -74,7 +74,7 @@ class FurnitureProduct extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.0),
                 image: DecorationImage(
-                    image: Image.asset(productModel.imagePath).image,
+                    image: Image.asset(productModel.imageUrl).image,
                     fit: BoxFit.fill),
               ),
             ),
@@ -112,7 +112,7 @@ class FurnitureProduct extends StatelessWidget {
 }
 
 class CartItem extends StatefulWidget {
-  final ProductModel productModel;
+  final ProductEntity productModel;
 
   const CartItem({super.key, required this.productModel});
 
@@ -134,7 +134,7 @@ class _CartItemState extends State<CartItem> {
             child: Image(
                 height: 110.0,
                 width: 110.0,
-                image: Image.asset(widget.productModel.imagePath).image,
+                image: Image.asset(widget.productModel.imageUrl).image,
                 fit: BoxFit.fill),
           ),
           SizedBox(
@@ -209,7 +209,7 @@ class _CartItemState extends State<CartItem> {
 }
 
 class BookmarkItem extends StatefulWidget {
-  final ProductModel productModel;
+  final ProductEntity productModel;
 
   const BookmarkItem({super.key, required this.productModel});
 
@@ -231,7 +231,7 @@ class _BookmarkItemState extends State<BookmarkItem> {
             child: Image(
                 height: 110.0,
                 width: 110.0,
-                image: Image.asset(widget.productModel.imagePath).image,
+                image: Image.asset(widget.productModel.imageUrl).image,
                 fit: BoxFit.fill),
           ),
           SizedBox(

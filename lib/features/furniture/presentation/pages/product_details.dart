@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pham/product_model.dart';
+import 'package:pham/features/furniture/domain/entity/product_entity.dart';
 
 class FurnitureDetails extends StatefulWidget {
-  final ProductModel productModel;
+  final ProductEntity productModel;
 
   const FurnitureDetails({super.key, required this.productModel});
 
@@ -35,7 +35,7 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                           height: MediaQuery.sizeOf(context).height * 0.55,
                           width: MediaQuery.sizeOf(context).width * 0.87,
                           image:
-                              Image.asset(widget.productModel.imagePath).image,
+                              Image.asset(widget.productModel.imageUrl).image,
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -231,9 +231,3 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
     );
   }
 }
-
-//
-// class RoundedRImage extends CustomClipper<RRect>{
-//
-//
-// }

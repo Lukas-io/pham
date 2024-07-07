@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pham/product_model.dart';
-import 'package:pham/success.dart';
-import 'package:pham/widgets.dart';
+import 'package:pham/features/furniture/domain/entity/product_entity.dart';
+import 'package:pham/features/furniture/presentation/pages/success.dart';
+import 'package:pham/features/furniture/presentation/widgets/widgets.dart';
 
 Widget HomeBody(BuildContext context) {
   return CustomScrollView(
@@ -106,7 +106,7 @@ class CartBody extends StatefulWidget {
 class _CartBodyState extends State<CartBody> {
   double totalPrice() {
     double total = 0;
-    for (ProductModel product in cart) {
+    for (ProductEntity product in cart) {
       total += product.price * product.quantity;
     }
     return total;

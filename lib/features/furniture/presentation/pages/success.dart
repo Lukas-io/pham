@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pham/home.dart';
-import 'package:pham/product_model.dart';
+import 'package:pham/features/furniture/presentation/pages/home.dart';
+import 'package:pham/features/furniture/domain/entity/product_entity.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
