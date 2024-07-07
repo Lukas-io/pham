@@ -1,18 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pham/product_model.dart';
 
-class FurnitureDetails extends StatefulWidget {
+import '../model/product_model.dart';
+
+class ProductDetails extends StatefulWidget {
   final ProductModel productModel;
 
-  const FurnitureDetails({super.key, required this.productModel});
+  const ProductDetails({super.key, required this.productModel});
 
   @override
-  State<FurnitureDetails> createState() => _FurnitureDetailsState();
+  State<ProductDetails> createState() => _ProductDetailsState();
 }
 
-class _FurnitureDetailsState extends State<FurnitureDetails> {
+class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +36,7 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                           height: MediaQuery.sizeOf(context).height * 0.55,
                           width: MediaQuery.sizeOf(context).width * 0.87,
                           image:
-                              Image.asset(widget.productModel.imagePath).image,
+                              Image.network(widget.productModel.imageUrl).image,
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -101,7 +102,7 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                             children: [
                               IconButton(
                                   onPressed: () => setState(() {
-                                        widget.productModel.addQuantity();
+                                        // widget.productModel.addQuantity();
                                       }),
                                   style: ButtonStyle(
                                       backgroundColor: WidgetStateProperty.all(
@@ -123,7 +124,7 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                               ),
                               IconButton(
                                   onPressed: () => setState(() {
-                                        widget.productModel.minusQuantity();
+                                        // widget.productModel.minusQuantity();
                                       }),
                                   style: ButtonStyle(
                                       backgroundColor: WidgetStateProperty.all(
@@ -180,13 +181,13 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                               padding: const EdgeInsets.all(16.0),
                               onPressed: () {
                                 setState(() {
-                                  widget.productModel.toggleBookmark();
+                                  // widget.productModel.toggleBookmark();
                                 });
                               },
-                              icon: Icon(
-                                widget.productModel.bookmark
-                                    ? CupertinoIcons.bookmark_fill
-                                    : CupertinoIcons.bookmark,
+                              icon: const Icon(
+                                // widget.productModel
+                                //     ? CupertinoIcons.bookmark_fill
+                                CupertinoIcons.bookmark,
                                 size: 30.0,
                               )),
                           const SizedBox(
@@ -195,11 +196,11 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                           Expanded(
                               child: TextButton(
                             onPressed: () {
-                              if (!widget.productModel.inCart) {
-                                setState(() {
-                                  widget.productModel.addToCart();
-                                });
-                              }
+                              // if (!widget.productModel.inCart) {
+                              //   setState(() {
+                              //     // widget.productModel.addToCart();
+                              //   });
+                              // }
                             },
                             style: ButtonStyle(
                                 alignment: Alignment.center,
@@ -210,13 +211,13 @@ class _FurnitureDetailsState extends State<FurnitureDetails> {
                                 padding: WidgetStateProperty.all(
                                     const EdgeInsets.symmetric(vertical: 16.0)),
                                 backgroundColor: WidgetStateProperty.all(
-                                    !widget.productModel.inCart
-                                        ? Color(0XFF242424)
-                                        : Color(0XFF27AE60))),
-                            child: Text(
-                                widget.productModel.inCart
-                                    ? "Added to cart"
-                                    : "Add to cart",
+                                    // !widget.productModel.inCart
+                                    //     ? Color(0XFF242424)
+                                    Color(0XFF27AE60))),
+                            child: const Text(
+                                // widget.productModel.inCart
+                                //     ? "Added to cart"
+                                "Add to cart",
                                 style: TextStyle(
                                     color: CupertinoColors.white,
                                     fontWeight: FontWeight.w600,
