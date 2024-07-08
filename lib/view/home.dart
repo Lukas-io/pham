@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../controller/controller.dart';
 import '../model/product_model.dart';
-import 'furniture_details.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -112,12 +111,12 @@ class ProductItem extends StatelessWidget {
         Stack(children: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                CupertinoPageRoute(
-                    builder: (BuildContext context) =>
-                        ProductDetails(productModel: productModel)),
-              );
+              // Navigator.push(
+              //   context,
+              //   CupertinoPageRoute(
+              //       builder: (BuildContext context) =>
+              //           ProductDetails(productModel: productModel)),
+              // );
             },
             child: Container(
               height: 230.0,
